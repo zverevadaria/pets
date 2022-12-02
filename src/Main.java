@@ -15,12 +15,17 @@ public class Main {
                 break;
 
             } else if (st.equals("LIST")){
-                
-                System.out.println("No pets found");
+                int i = 0;
+                if(i < pets.size()) {
+                    System.out.println(pets.get(i));
+                } else{
+                    System.out.println("В базе пока еще нет питомцев");
+                }
+
 
             } else if (st.equals("ADD")){
                 Pets newPet = new Pets();
-                newPet.AddPet(System.in);
+                newPet.AddPet();
                 pets.add(newPet);
                 System.out.println(newPet.petName + " добавлен в базу");
 

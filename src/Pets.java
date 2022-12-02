@@ -1,5 +1,3 @@
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.util.Scanner;
 public class Pets {
 
@@ -11,7 +9,7 @@ public class Pets {
         Scanner sr = new Scanner(System.in);
 
 
-        void AddPet(InputStream in) { // idea сама создала
+        void AddPet() { // idea сама создала
                 System.out.println("Введите тип:");
                 Kind = sr.nextLine();
                 System.out.println("Ваш вид: " + Kind);
