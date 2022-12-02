@@ -30,9 +30,13 @@ public class Main {
                 pets.add(newPet);
                 System.out.println(newPet.petName + " добавлен в базу");
 
-
-
+            } else if (st.startsWith("REMOVE")){
+                st = st.replaceAll("\\D+","");
+                int i = Integer.parseInt (st);
+                System.out.println(i);
             }
+
+
         }
     }
 }
