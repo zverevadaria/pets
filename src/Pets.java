@@ -21,6 +21,10 @@ public class Pets {
                 System.out.println("Имя питомца: " + petName);
         }
 
+        @Override
+        public String toString() {
+                return "Имя питомца: " + petName + " Тип: " + Kind + " Пол " + Sex + " / ";
+        }
 
 }
 

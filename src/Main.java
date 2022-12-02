@@ -17,7 +17,8 @@ public class Main {
             } else if (st.equals("LIST")){
                 int i = 0;
                 if(i < pets.size()) {
-                    System.out.println(pets.get(i));
+                    System.out.println(pets);
+                    ++i;
                 } else{
                     System.out.println("В базе пока еще нет питомцев");
                 }
