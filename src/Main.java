@@ -6,7 +6,7 @@ public class Main {
 
         Scanner sr = new Scanner(System.in);
         ArrayList<Pets> pets = new ArrayList<Pets>();
-
+        int petNumber;
 
         while (true) {
             String st = sr.nextLine();
@@ -28,12 +28,20 @@ public class Main {
                 Pets newPet = new Pets();
                 newPet.AddPet();
                 pets.add(newPet);
-                System.out.println(newPet.petName + " добавлен в базу");
+                petNumber = pets.size();
+                System.out.println(newPet.petName + " добавлен в базу под номером " + petNumber);
 
             } else if (st.startsWith("REMOVE")){
                 st = st.replaceAll("\\D+","");
-                int i = Integer.parseInt (st);
-                System.out.println(i);
+                int removePetNumber = Integer.parseInt (st);
+                pets.remove(removePetNumber - 1);
+                System.out.println("Питомец номер " + removePetNumber + " удален");
+
+            } else if (st.startsWith("EDIT")){
+                st = st.replaceAll("\\D+","");
+                int petEdit = Integer.parseInt (st);
+                System.out.println(petEdit);
+
             }
 
 
