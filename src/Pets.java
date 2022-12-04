@@ -24,6 +24,18 @@ public class Pets {
 
         }
 
+
+        void EditPet() {
+                System.out.println("Ввидите новое имя:");
+                petName = sr.nextLine();
+                System.out.println("Вид:");
+                Kind = sr.nextLine();
+                System.out.println("Ввидите пол ");
+                Sex = sr.nextLine();
+
+
+        }
+
         @Override
         public String toString() {
                 return "Имя питомца: " + petName + " Тип: " + Kind + " Пол " + Sex + " / ";

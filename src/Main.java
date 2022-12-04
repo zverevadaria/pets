@@ -14,37 +14,34 @@ public class Main {
                 System.out.println("Вы вышли из программы.");
                 break;
 
-            } else if (st.equals("LIST")){
+            } else if (st.equals("LIST")) {
                 int i = 0;
-                if(i < pets.size()) {
+                if (i < pets.size()) {
                     System.out.println(pets);
                     ++i;
-                } else{
+                } else {
                     System.out.println("В базе пока еще нет питомцев");
                 }
 
-
-            } else if (st.equals("ADD")){
+            } else if (st.equals("ADD")) {
                 Pets newPet = new Pets();
                 newPet.AddPet();
                 pets.add(newPet);
                 petNumber = pets.size();
                 System.out.println(newPet.petName + " добавлен в базу под номером " + petNumber);
 
-            } else if (st.startsWith("REMOVE")){
-                st = st.replaceAll("\\D+","");
-                int removePetNumber = Integer.parseInt (st);
+            } else if (st.startsWith("REMOVE")) {
+                st = st.replaceAll("\\D+", "");
+                int removePetNumber = Integer.parseInt(st);
                 pets.remove(removePetNumber - 1);
                 System.out.println("Питомец номер " + removePetNumber + " удален");
 
-            } else if (st.startsWith("EDIT")){
-                st = st.replaceAll("\\D+","");
-                int petEdit = Integer.parseInt (st);
-                System.out.println(petEdit);
-
+            } else if (st.startsWith("EDIT")) {
+                st = st.replaceAll("\\D+", "");
+                int petEditNumber = Integer.parseInt(st);
+                pets.get(petEditNumber - 1).EditPet();
+                System.out.println("Изменения внесены в базу");
             }
-
-
         }
     }
 }
