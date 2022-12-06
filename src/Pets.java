@@ -26,13 +26,28 @@ public class Pets {
 
 
         void EditPet() {
-                System.out.println("Ввидите новое имя:");
-                petName = sr.nextLine();
-                System.out.println("Вид:");
-                Kind = sr.nextLine();
-                System.out.println("Ввидите пол ");
-                Sex = sr.nextLine();
-
+                System.out.println("Введите имя питомца: ");
+                String editPetName = sr.nextLine();
+                if (editPetName.length() > 0) {
+                    petName = editPetName;
+                        System.out.println("Имя изменено");
+                } else {
+                        System.out.println("Имя не изменено");
+                }
+                System.out.println("Введите вид: ");
+                String editPetKind = sr.nextLine();
+                if (editPetName.length() > 0) {
+                        Kind = editPetKind;
+                } else {
+                        System.out.println("Вид не изменен");
+                }
+                System.out.println("Введите пол: ");
+                String editPetSex = sr.nextLine();
+                if (editPetName.length() > 0) {
+                        Sex = editPetSex;
+                } else {
+                        System.out.println("Пол не изменен");
+                }
 
         }
 
